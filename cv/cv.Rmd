@@ -34,8 +34,11 @@ tribble(
   "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur"
 ) %>% 
   mutate(Details = list(
-    c("Building real-time object detection models for use in 
-       agriculture using deep learning architectures."), 
+    c("Train real-time object detection and image segmentation
+       models for use in agriculture using Yolov2, SSD and Mask R-CNN
+       deep learning architectures with internally built framework.", 
+      "Delivered substantial improvement on performance of
+       previously built internal model"), 
     c("Delivered over 100 hours in training sessions for Microsoft 
        Excel, R for Analytics, Tableau, Statistics and Data Storytelling", 
       "Developing training products in the areas of statistics, 
@@ -59,6 +62,16 @@ tribble(
   detailed_entries(Company, Year, Position, Location, Details)
 ```
 
+# Projects 
+
+```{r}
+tribble(
+  ~ project_type, ~ year, ~ project_title, ~ location, 
+  "Honours thesis", "2017", "Family background and child health: the role of socioeconomic status and skills", "University of Wollongong", 
+  "", "Aug 2017 - Jan 2017", "Penang Skilled Workforce Study", "Penang Institute"
+) %>% 
+  detailed_entries(project_type, year, project_title, location)
+```
 # Education
 
 ```{r}
