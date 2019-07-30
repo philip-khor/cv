@@ -70,8 +70,15 @@ tribble(
   "Honours thesis", "2017", "Family background and child health: the role of socioeconomic status and skills", "University of Wollongong", 
   "", "Aug 2017 - Jan 2017", "Penang Skilled Workforce Study", "Penang Institute"
 ) %>% 
-  detailed_entries(project_type, year, project_title, location)
+  mutate(details = list(
+    c("Econometric analysis of the relationship between parental income and child health status in Australia using two large longitudinal datasets."), 
+    c("Identification of skill gaps and skill shortages in major Penang economic sectors through qualitative interviews and desk research.")
+  )) %>% 
+  detailed_entries(project_type, year, project_title, location, details)
 ```
+
+\newpage 
+
 # Education
 
 ```{r}
