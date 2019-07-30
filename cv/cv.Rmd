@@ -31,7 +31,8 @@ tribble(
   ~ Company, ~ Year, ~ Position, ~ Location, 
   "GRID Inc.", "May 2019 - August 2019", "Data Scientist Intern", "Omote-sando, Tokyo",
   "The Center of Applied Data Science", "July 2018 - May 2019", "Data Scientist Associate", "Bangsar South, Kuala Lumpur",
-  "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur"
+  "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
+  "Penang Institute", "Aug 2016 - Jan 2017", "Research Assistant", "George Town, Penang"
 ) %>% 
   mutate(Details = list(
     c("Train real-time object detection and image segmentation
@@ -56,7 +57,11 @@ tribble(
     c("Data science finishing school for graduates covering R and Python 
        programming modules, machine learning in scikit-learn, visualisation 
        in ggplot2, seaborn, matplotlib and Tableau, forecasting in R and 
-       natural language processing in NLTK.")
+       natural language processing in NLTK."), 
+    c("Provided research assistance for the Penang Skilled Workforce Study project, which identifies skills shortages and skill gaps in key economic sectors in Penang.",
+      "Scheduled and performed interviews with Human Resource, company executives and other governmental and non- governmental stakeholders.", 
+      "Liased with state and federal government agencies to obtain secondary data.", 
+      "Emcee at the forum Budgeting Priorities in a Challenging Economic Environment (Nov 2016).")
   )) %>% 
   tidyr::unnest() %>% 
   detailed_entries(Company, Year, Position, Location, Details)
