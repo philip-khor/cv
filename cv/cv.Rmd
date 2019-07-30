@@ -80,9 +80,9 @@ tribble(
       "Used data from the Household, Income and Labour Dynamics in Australia Survey (HILDA) and the Longitudinal Study of Australian Children (LSAC) to replicate prior longitudinal results on the effect of parental income on child health", 
       "Attempted a novel identification strategy to estimate the effect of parental resources on child health"), 
     c("Identification of skill gaps and skill shortages in major Penang economic sectors.", 
-      "Conducted and assisted with qualitative interviews with industry stakeholders and human resource personnel", 
-      "Assisted in the development of questionnaires for data collection and development of strategies to improve response rates", 
-      "Assisted in data analysis and the preparation of visualizations for the report")
+      "Conducted and assisted with qualitative interviews with industry stakeholders and human resource personnel.", 
+      "Assisted in the development of questionnaires for data collection and development of strategies to improve response rates.", 
+      "Assisted in data analysis and the preparation of visualizations for the report.")
   )) %>% 
   tidyr::unnest() %>% 
   detailed_entries(project_type, year, project_title, location, details)
@@ -119,8 +119,8 @@ tribble(
     "Consistently placed in the Dean’s Merit List (2014-2017), 
      which ranks the top 5% of students in the Faculty of Business."), 
   c("Received the Merit Scholarship amounting to 100% of the tuition fees 
-     for the length of the program in recognition of prior academic performance", 
-    "Awarded Book Prize"))) %>% 
+     for the length of the program in recognition of prior academic performance.", 
+    "Awarded Book Prize for overall academic performance."))) %>% 
   tidyr::unnest() %>% 
   detailed_entries(Degree, Year, Institution, Where, Details)
 ```
