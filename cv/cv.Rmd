@@ -29,7 +29,7 @@ Data professional with a background in Economics and research experience in appl
 ```{r}
 tribble(
   ~ Company, ~ Year, ~ Position, ~ Location, 
-  "GRID Inc.", "May 2019 - August 2019", "Data Scientist Intern", "Omote-sando, Tokyo",
+  "GRID Inc.", "May 2019 - August 2019", "Data Scientist Intern", "Minato-ku, Tokyo",
   "The Center of Applied Data Science", "July 2018 - May 2019", "Data Scientist Associate", "Bangsar South, Kuala Lumpur",
   "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
   "Penang Institute", "Aug 2016 - Jan 2017", "Research Assistant", "George Town, Penang"
@@ -76,9 +76,15 @@ tribble(
   "", "Aug 2017 - Jan 2017", "Penang Skilled Workforce Study", "Penang Institute"
 ) %>% 
   mutate(details = list(
-    c("Econometric analysis of the relationship between parental income and child health status in Australia using two large longitudinal datasets."), 
-    c("Identification of skill gaps and skill shortages in major Penang economic sectors through qualitative interviews and desk research.")
+    c("Econometric analysis of the relationship between parental income and child health status in Australia using two large Australian longitudinal datasets.", 
+      "Used data from the Household, Income and Labour Dynamics in Australia Survey (HILDA) and the Longitudinal Study of Australian Children (LSAC) to replicate prior longitudinal results on the effect of parental income on child health", 
+      "Attempted a novel identification strategy to estimate the effect of parental resources on child health"), 
+    c("Identification of skill gaps and skill shortages in major Penang economic sectors.", 
+      "Conducted and assisted with qualitative interviews with industry stakeholders and human resource personnel", 
+      "Assisted in the development of questionnaires for data collection and development of strategies to improve response rates", 
+      "Assisted in data analysis and the preparation of visualizations for the report")
   )) %>% 
+  tidyr::unnest() %>% 
   detailed_entries(project_type, year, project_title, location, details)
 ```
 
