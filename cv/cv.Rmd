@@ -58,10 +58,16 @@ tribble(
        programming modules, machine learning in scikit-learn, visualisation 
        in ggplot2, seaborn, matplotlib and Tableau, forecasting in R and 
        natural language processing in NLTK."), 
-    c("Provided research assistance for the Penang Skilled Workforce Study project, which identifies skills shortages and skill gaps in key economic sectors in Penang.",
-      "Scheduled and performed interviews with Human Resource, company executives and other governmental and non- governmental stakeholders.", 
-      "Liased with state and federal government agencies to obtain secondary data.", 
-      "Emcee at the forum Budgeting Priorities in a Challenging Economic Environment (Nov 2016).")
+    c("Provided research assistance for the Penang Skilled Workforce Study
+       project, which identifies skills shortages and skill gaps in key
+       economic sectors in Penang.",
+      "Scheduled and performed interviews with Human Resource, company
+       executives and other governmental and non- governmental
+       stakeholders.", 
+      "Liased with state and federal government agencies to obtain secondary
+       data.", 
+      "Emcee at the forum Budgeting Priorities in a Challenging Economic
+       Environment (Nov 2016).")
   )) %>% 
   tidyr::unnest() %>% 
   detailed_entries(Company, Year, Position, Location, Details)
@@ -76,13 +82,23 @@ tribble(
   "", "Aug 2017 - Jan 2017", "Penang Skilled Workforce Study", "Penang Institute"
 ) %>% 
   mutate(details = list(
-    c("Econometric analysis of the relationship between parental income and child health status in Australia using two large Australian longitudinal datasets.", 
-      "Used data from the Household, Income and Labour Dynamics in Australia Survey (HILDA) and the Longitudinal Study of Australian Children (LSAC) to replicate prior longitudinal results on the effect of parental income on child health", 
-      "Attempted a novel identification strategy to estimate the effect of parental resources on child health"), 
-    c("Identification of skill gaps and skill shortages in major Penang economic sectors.", 
-      "Conducted and assisted with qualitative interviews with industry stakeholders and human resource personnel.", 
-      "Assisted in the development of questionnaires for data collection and development of strategies to improve response rates.", 
-      "Assisted in data analysis and the preparation of visualizations for the report.")
+    c("Econometric analysis of the relationship between parental income and
+       child health status in Australia using two large Australian 
+       longitudinal datasets.", 
+      "Used data from the Household, Income and Labour Dynamics in Australia
+       Survey (HILDA) and the Longitudinal Study of Australian Children
+       (LSAC) to replicate prior longitudinal results on the effect of
+       parental income on child health", 
+      "Attempted a novel identification strategy to estimate the effect of
+       parental resources on child health"), 
+    c("Identification of skill gaps and skill shortages in major Penang
+       economic sectors.", 
+      "Conducted and assisted with qualitative interviews with industry
+       stakeholders and human resource personnel.", 
+      "Assisted in the development of questionnaires for data collection and
+       development of strategies to improve response rates.", 
+      "Assisted in data analysis and the preparation of visualizations for
+       the report.")
   )) %>% 
   tidyr::unnest() %>% 
   detailed_entries(project_type, year, project_title, location, details)
