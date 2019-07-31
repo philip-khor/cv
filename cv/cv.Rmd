@@ -6,7 +6,6 @@ address: Georgetown, Malaysia
 phone: +60 16 720 2723
 www: philipscurve.com
 email: pk.qa@outlook.com
-twitter: philip_khor
 github: philip-khor
 linkedin: philip-khor
 date: "`r format(Sys.time(), '%B %Y')`"
@@ -36,29 +35,35 @@ tribble(
   "Penang Institute", "Dec 2015 - Jan 2016", "Intern: Economics Studies", "George Town, Penang"
 ) %>% 
   mutate(Details = list(
-    c("Train real-time object detection and image segmentation
+    c("Trained real-time object detection and image segmentation
        models for use in agriculture using Yolov2, SSD and Mask R-CNN
        deep learning architectures with internally built framework.", 
-      "Delivered substantial improvement on performance of
-       previously built internal model"), 
+      "Delivered substantial improvement on the accuracy of number of trees 
+       counted, relative to previously built internal model", 
+      "Developed metrics to evaluate model to align with client objectives",
+      "Developed pipeline consisting of Python command line interfaces to 
+       facilitate preprocessing, partitioning and post-processing of image and 
+       annotation data."), 
     c("Delivered over 100 hours in training sessions for Microsoft 
        Excel, R for Analytics, Tableau, Statistics and Data Storytelling", 
-      "Developing training products in the areas of statistics, 
+      "Developed training products in the areas of statistics, 
        exploratory analysis, data visualization and machine learning 
        using spreadsheets, R, Python and Tableau delivered through 
        tools such as Jupyter Notebooks and R Markdown, focusing on 
        commercial applications of data science",
-      "Module leader for Excel Analytics and Regression Modelling 
-       and Evaluation module",
+      "Led development teams for Excel Analytics and Regression Modelling 
+       and Evaluation modules",
       "Core developer of introductory and intermediate 
        Statistics and R for Analytics modules",
-      "Also involved in developing training material for 
+      "Worked with teams to develop and deliver training material for 
        Natural Language Processing, Neural Networks, Data Visualisation 
-       with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules"), 
+       with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules", 
+      "Developed internal conventions for material formatting and module code formats."), 
     c("Data science finishing school for graduates covering R and Python 
-       programming modules, machine learning in scikit-learn, visualisation 
-       in ggplot2, seaborn, matplotlib and Tableau, forecasting in R and 
-       natural language processing in NLTK."), 
+       programming modules, statistics, data preprocessing, 
+       machine learning, data visualisation with 
+       programming packages and interactive software, forecasting and 
+       natural language processing."), 
     c("Provided research assistance for the Penang Skilled Workforce Study
        project, which identifies skills shortages and skill gaps in key
        economic sectors in Penang.",
@@ -69,50 +74,16 @@ tribble(
        data.", 
       "Emcee at the forum Budgeting Priorities in a Challenging Economic
        Environment (Nov 2016)."), 
-    c("Involved in the Penang Skilled Workforce Study, Penang Economic and Development Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).", 
-      "Obtaining, sorting and analysing data across a wide array of sources.", 
-      "Liaising with government agencies to obtain data.", 
-      "Preparing reports and editing report text and formatting.")
+    c("Contributed to the Penang Skilled Workforce Study, Penang Economic and Development Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).", 
+      "Obtained, sorted and analysed data across a wide array of sources.", 
+      "Liased with government agencies to obtain data.", 
+      "Prepared reports and edited report text and formatting.")
   )) %>% 
   tidyr::unnest() %>% 
   detailed_entries(Company, Year, Position, Location, Details)
 ```
 
 \newpage 
-
-# Projects 
-
-```{r}
-tribble(
-  ~ project_type, ~ year, ~ project_title, ~ location, 
-  "Honours thesis", "2017", "Family background and child health: the role of socioeconomic status and skills", "University of Wollongong", 
-  "", "Aug 2017 - Jan 2017", "Penang Skilled Workforce Study", "Penang Institute"
-) %>% 
-  mutate(details = list(
-    c("Econometric analysis of the relationship between parental income and
-       child health status in Australia using two large Australian 
-       longitudinal datasets.", 
-      "Used data from the Household, Income and Labour Dynamics in Australia
-       Survey (HILDA) and the Longitudinal Study of Australian Children
-       (LSAC) to replicate prior longitudinal results on the effect of
-       parental income on child health.", 
-      "Attempted a novel identification strategy to estimate the effect of
-       parental resources on child health."), 
-    c("Identification of skill gaps and skill shortages in major Penang
-       economic sectors.", 
-      "Conducted and assisted with qualitative interviews with industry
-       stakeholders and human resource personnel.", 
-      "Assisted in the development of questionnaires for data collection and
-       development of strategies to improve response rates.", 
-      "Assisted in data analysis and the preparation of visualizations for
-       the report.")
-  )) %>% 
-  tidyr::unnest() %>% 
-  detailed_entries(project_type, year, project_title, location, details)
-```
-
-
-
 # Education
 
 ```{r}
@@ -147,6 +118,40 @@ tribble(
   tidyr::unnest() %>% 
   detailed_entries(Degree, Year, Institution, Where, Details)
 ```
+
+
+# Projects 
+
+```{r}
+tribble(
+  ~ project_type, ~ year, ~ project_title, ~ location, 
+  "Honours thesis", "2017", "Family background and child health: the role of socioeconomic status and skills", "University of Wollongong", 
+  "", "Aug 2017 - Jan 2017", "Penang skilled workforce study: labour skills for growth and change", "Penang Institute"
+) %>% 
+  mutate(details = list(
+    c("Econometric analysis of the relationship between parental income and
+       child health status in Australia using two large Australian 
+       longitudinal datasets.", 
+      "Used data from the Household, Income and Labour Dynamics in Australia
+       Survey (HILDA) and the Longitudinal Study of Australian Children
+       (LSAC) to replicate prior longitudinal results on the effect of
+       parental income on child health.", 
+      "Developed a novel identification strategy to estimate the effect of
+       parental resources on child health."), 
+    c("Identification of skill gaps and skill shortages in major Penang
+       economic sectors.", 
+      "Conducted and assisted with qualitative interviews with industry
+       stakeholders and human resource personnel.", 
+      "Assisted in the development of questionnaires for data collection and
+       development of strategies to improve response rates.", 
+      "Assisted in data analysis and the preparation of visualizations for
+       the report.")
+  )) %>% 
+  tidyr::unnest() %>% 
+  detailed_entries(project_type, year, project_title, location, details)
+```
+
+
 
 
 
