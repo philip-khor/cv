@@ -74,7 +74,8 @@ tribble(
        data.", 
       "Emcee at the forum Budgeting Priorities in a Challenging Economic
        Environment (Nov 2016)."), 
-    c("Contributed to the Penang Skilled Workforce Study, Penang Economic and Development Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).", 
+    c("Contributed to the Penang Skilled Workforce Study, Penang Economic and Development 
+       Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).", 
       "Obtained, sorted and analysed data across a wide array of sources.", 
       "Liased with government agencies to obtain data.", 
       "Prepared reports and edited report text and formatting.")
