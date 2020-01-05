@@ -2,7 +2,7 @@
 name: Philip Qing An 
 surname: Khor
 position: Data Scientist
-address: Georgetown, Malaysia
+address: George Town, Penang
 phone: +60 16 720 2723
 www: philipscurve.com
 email: pk.qa@outlook.com
@@ -21,13 +21,14 @@ library(tibble)
 
 # Summary
 
-Data professional with a background in Economics and research experience in applied microeconometrics. Fluent in Python machine learning using scikit-learn and data wrangling with R using tidyverse packages.
+Data professional with a background in Economics and research experience in applied microeconometrics. Prior experience building proof-of-concept deep learning models and developing and delivering enterprise-level data science training courses in statistics and programming.
 
 # Work Experience and Training 
 
 ```{r}
 tribble(
   ~ Company, ~ Year, ~ Position, ~ Location, 
+  "Skymind AI Berhad", "October 2019 - December 2019", "Technical Writer", "George Town, Penang",
   "GRID Inc.", "May 2019 - August 2019", "Data Scientist Intern", "Minato-ku, Tokyo",
   "The Center of Applied Data Science", "July 2018 - May 2019", "Data Scientist Associate", "Bangsar South, Kuala Lumpur",
   "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
@@ -35,29 +36,34 @@ tribble(
   "Penang Institute", "Dec 2015 - Jan 2016", "Intern: Economics Studies", "George Town, Penang"
 ) %>% 
   mutate(Details = list(
+    c("Prepared documentation on internally developed 
+       model deployment software, including but not limited to installation 
+       and usage instructions and examples, to support internal and external users.",
+      "Developed and provided editing assistance for development of training materials.",
+      "Provided support and drove community engagement events."),
     c("Trained real-time object detection and image segmentation
-       models for use in agriculture using Yolov2, SSD and Mask R-CNN
+       models for use in agriculture using YOLOv2, SSD and Mask R-CNN
        deep learning architectures with internally built framework.", 
       "Delivered substantial improvement on the accuracy of number of trees 
-       counted, relative to previously built internal model", 
-      "Developed metrics to evaluate model to align with client objectives",
+       counted, relative to previously built internal model.", 
+      "Developed metrics to evaluate model to align with client objectives.",
       "Developed pipeline consisting of Python command line interfaces to 
        facilitate preprocessing, partitioning and post-processing of image and 
        annotation data."), 
     c("Delivered over 100 hours in training sessions for Microsoft 
-       Excel, R for Analytics, Tableau, Statistics and Data Storytelling", 
+       Excel, R for Analytics, Tableau, Statistics and Data Storytelling.", 
       "Developed training products in the areas of statistics, 
        exploratory analysis, data visualization and machine learning 
        using spreadsheets, R, Python and Tableau delivered through 
        tools such as Jupyter Notebooks and R Markdown, focusing on 
-       commercial applications of data science",
+       commercial applications of data science.",
       "Led development teams for Excel Analytics and Regression Modelling 
-       and Evaluation modules",
+       and Evaluation modules.",
       "Core developer of introductory and intermediate 
-       Statistics and R for Analytics modules",
+       Statistics and R for Analytics modules.",
       "Worked with teams to develop and deliver training material for 
        Natural Language Processing, Neural Networks, Data Visualisation 
-       with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules", 
+       with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules.", 
       "Developed internal conventions for material formatting and module code formats."), 
     c("Data science finishing school for graduates covering R and Python 
        programming modules, statistics, data preprocessing, 
@@ -80,7 +86,7 @@ tribble(
       "Liased with government agencies to obtain data.", 
       "Prepared reports and edited report text and formatting.")
   )) %>% 
-  tidyr::unnest() %>% 
+  tidyr::unnest(cols = c(Details)) %>% 
   detailed_entries(Company, Year, Position, Location, Details)
 ```
 
@@ -116,7 +122,7 @@ tribble(
   c("Received the Merit Scholarship amounting to 100% of the tuition fees 
      for the length of the program in recognition of prior academic performance.", 
     "Awarded Book Prize for overall academic performance."))) %>% 
-  tidyr::unnest() %>% 
+  tidyr::unnest(cols = c(Details)) %>% 
   detailed_entries(Degree, Year, Institution, Where, Details)
 ```
 
@@ -129,7 +135,7 @@ tribble(
   "Honours thesis", "2017", "Family background and child health: the role of socioeconomic status and skills", "University of Wollongong", 
   "", "Aug 2017 - Jan 2017", "Penang skilled workforce study: labour skills for growth and change", "Penang Institute"
 ) %>% 
-  mutate(details = list(
+  mutate(Details = list(
     c("Econometric analysis of the relationship between parental income and
        child health status in Australia using two large Australian 
        longitudinal datasets.", 
@@ -148,8 +154,8 @@ tribble(
       "Assisted in data analysis and the preparation of visualizations for
        the report.")
   )) %>% 
-  tidyr::unnest() %>% 
-  detailed_entries(project_type, year, project_title, location, details)
+  tidyr::unnest(cols = c(Details)) %>% 
+  detailed_entries(project_type, year, project_title, location, Details)
 ```
 
 
