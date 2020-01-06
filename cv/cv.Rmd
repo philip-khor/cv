@@ -2,7 +2,7 @@
 name: Philip Qing An 
 surname: Khor
 position: Data Scientist
-address: George Town, Penang
+address: Penang, Malaysia
 phone: +60 16 720 2723
 www: philipscurve.com
 email: pk.qa@outlook.com
@@ -21,7 +21,7 @@ library(tibble)
 
 # Summary
 
-Data professional with a background in Economics and research experience in applied microeconometrics. Prior experience building proof-of-concept deep learning models and developing and delivering enterprise-level data science training courses in statistics and programming.
+Data scientist with a background in Economics and research experience in applied microeconometrics. Prior experience building proof-of-concept deep learning models, driving documentation and advocacy initiatives and developing and delivering enterprise-level data science training courses in statistics and programming.
 
 # Work Experience and Training 
 
@@ -37,10 +37,9 @@ tribble(
 ) %>% 
   mutate(Details = list(
     c("Prepared documentation on internally developed 
-       model deployment software, including but not limited to installation 
-       and usage instructions and examples, to support internal and external users.",
-      "Developed and provided editing assistance for development of training materials.",
-      "Provided support and drove community engagement events."),
+       model deployment software to support internal and external users.",
+      "Provided editing assistance for development of training materials.",
+      "Drove and provided support for community engagement events."),
     c("Trained real-time object detection and image segmentation
        models for use in agriculture using YOLOv2, SSD and Mask R-CNN
        deep learning architectures with internally built framework.", 
