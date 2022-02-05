@@ -10,7 +10,9 @@ github: philip-khor
 linkedin: philip-khor
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
-output: vitae::awesomecv
+output: 
+  vitae::awesomecv: 
+    latex_engine: lualatex
 ---
 
 ```{r setup, include=FALSE}
@@ -21,21 +23,36 @@ library(tibble)
 
 # Summary
 
-Data scientist with a background in Economics and research experience in applied microeconometrics. Prior experience building proof-of-concept deep learning models, driving documentation and advocacy initiatives and developing and delivering enterprise-level data science training courses in statistics and programming.
+Data scientist with a background in Economics and research experience in applied microeconometrics. Prior experience with regulatory modelling in the financial sector, building deep learning models, driving documentation and advocacy initiatives as well as developing and delivering enterprise data science training courses in statistics and programming.
 
-# Work Experience and Training 
+# Work Experience  
 
 ```{r}
 tribble(
   ~ Company, ~ Year, ~ Position, ~ Location, 
+  "CIMB Bank Berhad", "March 2020 - present", "Manager, Regional Advanced Risk Modelling, Group Risk", "Kuala Lumpur", 
   "Skymind AI Berhad", "October 2019 - December 2019", "Technical Writer", "George Town, Penang",
   "GRID Inc.", "May 2019 - August 2019", "Data Scientist Intern", "Minato-ku, Tokyo",
   "The Center of Applied Data Science", "July 2018 - May 2019", "Data Scientist Associate", "Bangsar South, Kuala Lumpur",
-  "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
-  "Penang Institute", "Aug 2016 - Jan 2017", "Research Assistant: Economics Studies", "George Town, Penang", 
-  "Penang Institute", "Dec 2015 - Jan 2016", "Intern: Economics Studies", "George Town, Penang"
+  # "ASEAN Data Analytics eXchange", "Feb 2018 - June 2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
+  "Penang Institute", "Dec 2015 - Jan 2016, Aug 2016 - Jan 2017", "Research Assistant: Economics Studies", "George Town, Penang" #, 
+  # "Penang Institute", "Aug 2016 - Jan 2017", "Research Assistant: Economics Studies", "George Town, Penang", 
+  # "Penang Institute", "Dec 2015 - Jan 2016", "Intern: Economics Studies", "George Town, Penang"
 ) %>% 
   mutate(Details = list(
+    c(
+      "Provide technical leadership for development of credit scoring machine
+      learning models to meet stakeholder and regulatory expectations, and
+      communicating model outcomes with comprehensive model documentation.", 
+      "Develop scripts and internal package with R to automate analysis
+      on AutoML platform.",
+      "Liaise with vendor to ensure comprehensive understanding of AutoML platform 
+      processes.",
+      "Review and align regulatory expectations for the use of complex modelling 
+      methodologies in the development of credit risk ratings models.", 
+      "Promote understanding of machine learning algorithms, model explanability and 
+      fairness considerations for credit risk ratings models."
+    ), 
     c("Prepared documentation on internally developed 
        model deployment software to support internal and external users.",
       "Provided editing assistance for development of training materials.",
@@ -47,7 +64,7 @@ tribble(
        counted, relative to previously built internal model.", 
       "Developed metrics to evaluate model to align with client objectives.",
       "Developed pipeline consisting of Python command line interfaces to 
-       facilitate preprocessing, partitioning and post-processing of image and 
+       facilitate pre-processing, partitioning and post-processing of image and 
        annotation data."), 
     c("Delivered over 100 hours in training sessions for Microsoft 
        Excel, R for Analytics, Tableau, Statistics and Data Storytelling.", 
@@ -64,26 +81,22 @@ tribble(
        Natural Language Processing, Neural Networks, Data Visualisation 
        with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules.", 
       "Developed internal conventions for material formatting and module code formats."), 
-    c("Data science finishing school for graduates covering R and Python 
-       programming modules, statistics, data preprocessing, 
-       machine learning, data visualisation with 
-       programming packages and interactive software, forecasting and 
-       natural language processing."), 
-    c("Provided research assistance for the Penang Skilled Workforce Study
-       project, which identifies skills shortages and skill gaps in key
-       economic sectors in Penang.",
+    # c("Data science finishing school for graduates covering R and Python 
+    #    programming modules, statistics, data preprocessing, 
+    #    machine learning, data visualisation with 
+    #    programming packages and interactive software, forecasting and 
+    #    natural language processing."), 
+    c("Provided key research assistance for the Penang Skilled Workforce Study
+       project.",
       "Scheduled and performed interviews with Human Resource, company
-       executives and other governmental and non- governmental
+       executives and other governmental and non-governmental
        stakeholders.", 
-      "Liased with state and federal government agencies to obtain secondary
-       data.", 
+      "Prepared reports and edited report text and formatting.",
       "Emcee at the forum Budgeting Priorities in a Challenging Economic
-       Environment (Nov 2016)."), 
-    c("Contributed to the Penang Skilled Workforce Study, Penang Economic and Development 
-       Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).", 
-      "Obtained, sorted and analysed data across a wide array of sources.", 
-      "Liased with government agencies to obtain data.", 
-      "Prepared reports and edited report text and formatting.")
+       Environment (Nov 2016).",
+       "Contributed to the Penang Economic and Development 
+       Report 2015/2016 and the Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA)." 
+      )
   )) %>% 
   tidyr::unnest(cols = c(Details)) %>% 
   detailed_entries(Company, Year, Position, Location, Details)
@@ -125,6 +138,26 @@ tribble(
   detailed_entries(Degree, Year, Institution, Where, Details)
 ```
 
+# Qualifications
+
+```{r}
+tribble(
+  ~ Institution, ~ Year, ~ Qualification, ~ Where, 
+  "Asian Institute of Chartered Bankers", "2022", "Bank Risk Management", "Kuala Lumpur",
+  "ASEAN Data Analytics eXchange", "2018", "Data Scientist Trainee", "Bangsar South, Kuala Lumpur", 
+
+) %>% 
+  mutate(Details = list(
+    c("Provide banking professionals who aspire to be risk specialists with a comprehensive understanding of bank risk management activities."), 
+    c("Data science finishing school for graduates covering R and Python 
+       programming modules, statistics, data preprocessing, 
+       machine learning, data visualisation with 
+       programming packages and interactive software, forecasting and 
+       natural language processing.")
+  )) %>% 
+  tidyr::unnest(cols = c(Details)) %>% 
+  detailed_entries(Institution, Year, Qualification, Where, Details)
+```
 
 # Projects 
 
