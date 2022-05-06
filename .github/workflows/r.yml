@@ -9,12 +9,13 @@
 name: R
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main ]
-    paths: ['**.Rmd']
+    paths: 'cv/**'
   pull_request:
     branches: [ main ]
-    paths: ['**.Rmd']
+    paths: 'cv/**'
 
 permissions:
   contents: read
