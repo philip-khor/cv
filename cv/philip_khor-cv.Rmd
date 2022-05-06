@@ -30,13 +30,15 @@ read_then_unnest <- function(path) {
 
 # Summary
 
-Data scientist with a background in Economics and research experience in applied microeconometrics. Prior experience with regulatory modelling in the financial sector, building deep learning models, driving documentation and advocacy initiatives as well as developing and delivering enterprise data science training courses in statistics and programming.
+Data scientist with a background in Economics and research experience in applied 
+microeconometrics. Prior experience with regulatory modelling in the financial 
+sector, building deep learning models, driving documentation and advocacy 
+initiatives as well as developing and delivering enterprise data science 
+training courses in statistics and programming.
 
 # Work Experience  
 
 ```{r}
-
-
 read_then_unnest("cv/src/experience.yaml") |> 
   detailed_entries(company, year, position, location, details)
 ```
@@ -62,9 +64,4 @@ read_then_unnest("cv/src/qualifications.yaml") |>
 read_then_unnest("cv/src/projects.yaml") |> 
   detailed_entries(project_type, year, project_title, location, details)
 ```
-
-
-
-
-
 

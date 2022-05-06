@@ -1,3 +1,4 @@
+cv/fonts/
 .Rproj.user
 .Rhistory
 .RData
@@ -8,3 +9,4 @@
 *.log
 *.tex
 *.out
+*.cls
