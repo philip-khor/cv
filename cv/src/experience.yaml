@@ -1,0 +1,80 @@
+- 
+  company: CIMB Bank Berhad
+  year: March 2020 - May 2022
+  position: Manager, Regional Advanced Risk Modelling, Group Risk
+  location: Kuala Lumpur
+  details: 
+  - Technical lead for development of credit scoring machine
+    learning models to meet stakeholder and regulatory expectations, and
+    communicating model outcomes with comprehensive model documentation. 
+  - Develop scripts and internal package with R to automate analysis
+    on AutoML platform.
+  - Liaise with vendor to ensure comprehensive understanding of AutoML platform 
+    processes.
+  - Review and align regulatory expectations for the use of complex modelling 
+    methodologies in the development of credit risk ratings models. 
+  - Promote understanding of machine learning algorithms, model explanability and 
+    fairness considerations for credit risk ratings models.
+- 
+  company: Skymind AI Berhad
+  year: October 2019 - December 2019
+  position: Technical Writer
+  location: George Town, Penang
+  details: 
+  - Prepared documentation on internally developed 
+    model deployment software to support internal and external users.
+  - Provided editing assistance for development of training materials.
+  - Drove and provided support for community engagement events.
+- 
+  company: GRID Inc.
+  year: May 2019 - August 2019
+  position: Data Scientist Intern
+  location: Minato-ku, Tokyo
+  details: 
+  - Trained real-time object detection and image segmentation
+    models for use in agriculture using YOLOv2, SSD and Mask R-CNN
+    deep learning architectures with internally built framework.
+  - Delivered substantial improvement on the accuracy of number of trees 
+    counted, relative to previously built internal model. 
+  - Developed metrics to evaluate model to align with client objectives.
+  - Developed pipeline consisting of Python command line interfaces to 
+    facilitate pre-processing, partitioning and post-processing of image and 
+    annotation data.
+- 
+  company: The Center of Applied Data Science
+  year: July 2018 - May 2019
+  position: Data Scientist Associate
+  location: Bangsar South, Kuala Lumpur
+  details: 
+  - Delivered over 100 hours in training sessions for Microsoft 
+    Excel, R for Analytics, Tableau, Statistics and Data Storytelling.
+  - Developed training products in the areas of statistics, 
+    exploratory analysis, data visualization and machine learning 
+    using spreadsheets, R, Python and Tableau delivered through 
+    tools such as Jupyter Notebooks and R Markdown, focusing on 
+    commercial applications of data science.
+  - Led development teams for Excel Analytics and Regression Modelling 
+    and Evaluation modules.
+  - Core developer of introductory and intermediate Statistics and R for
+    Analytics modules.
+  - Worked with teams to develop and deliver training material for 
+    Natural Language Processing, Neural Networks, Data Visualisation 
+    with Tableau, A/B/n Testing and Time Series Analytics and Forecasting modules.
+  - Developed internal conventions for material formatting and module code formats.
+-
+  company: Penang Institute
+  year: Dec 2015 - Jan 2016, Aug 2016 - Jan 2017
+  position: "Research Assistant: Economics Studies"
+  location: George Town, Penang
+  details:     
+  - Provided key research assistance for the Penang Skilled Workforce Study
+    project.
+  - Scheduled and performed interviews with Human Resource, company
+    executives and other governmental and non-governmental
+    stakeholders.
+  - Prepared reports and edited report text and formatting.
+  - Emcee at the forum Budgeting Priorities in a Challenging Economic Environment 
+    (Nov 2016).
+  - Contributed to the Penang Economic and Development Report 2015/2016 and the
+    Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).
+
