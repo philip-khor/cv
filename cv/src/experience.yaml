@@ -4,17 +4,20 @@
   position: Manager, Regional Advanced Risk Modelling, Group Risk
   location: Kuala Lumpur
   details: 
-  - Technical lead for development of credit scoring machine
-    learning models to meet stakeholder and regulatory expectations, and
-    communicating model outcomes with comprehensive model documentation. 
-  - Develop scripts and internal package with R to automate analysis
-    on AutoML platform.
+  - Review and enhance model development processes to meet regulatory expectations
+    for the use of complex modelling methodologies in the development of Basel and 
+    IRFRS9 credit risk ratings models. 
+  - Communicate model outcomes to stakeholders to ensure that model behaviour 
+    is consistent with business expectations.  
+  - Prepare and enhance model documentation for machine learning models to meet 
+    regulatory expectations.
+  - Work with model validators to address gaps in model development.
+  - Work with data engineers to ensure appropriateness of feature derivation logic. 
+  - Develop scripts and internal package with R to automate analysis on AutoML platform.
   - Liaise with vendor to ensure comprehensive understanding of AutoML platform 
     processes.
-  - Review and align regulatory expectations for the use of complex modelling 
-    methodologies in the development of credit risk ratings models. 
-  - Promote understanding of machine learning algorithms, model explanability and 
-    fairness considerations for credit risk ratings models.
+  - Upskill risk modellers to ensure understanding of machine learning algorithms,
+    model explanability and fairness considerations for credit risk ratings models.
 - 
   company: Skymind AI Berhad
   year: October 2019 - December 2019
@@ -48,11 +51,10 @@
   details: 
   - Delivered over 100 hours in training sessions for Microsoft 
     Excel, R for Analytics, Tableau, Statistics and Data Storytelling.
-  - Developed training products in the areas of statistics, 
-    exploratory analysis, data visualization and machine learning 
-    using spreadsheets, R, Python and Tableau delivered through 
-    tools such as Jupyter Notebooks and R Markdown, focusing on 
-    commercial applications of data science.
+  - Developed training products in the areas of statistics, exploratory analysis,
+    data visualization and machine learning using spreadsheets, R, Python and 
+    Tableau delivered through tools such as Jupyter Notebooks and R Markdown,
+    focusing on commercial applications of data science.
   - Led development teams for Excel Analytics and Regression Modelling 
     and Evaluation modules.
   - Core developer of introductory and intermediate Statistics and R for
