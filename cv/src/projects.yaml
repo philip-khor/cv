@@ -1,4 +1,52 @@
 - 
+  project_type: ""
+  year: 2023 - present
+  project_title: "Key Penang Statistics"
+  location: Penang Institute
+  details: 
+  - 12 dashboards providing numerical insights into key socioeconomic
+    issues in Penang for public consumption
+- 
+  project_type: ""
+  year: 2023
+  project_title: "Penang Strategy for Economic Ecosystem Development"
+  location: Penang Institute
+  details: 
+  - Design visualisations of key economic indicators at sector and 
+    aggregate level
+  - Develop policy recommendations adapting various policy 
+    documents to local context
+
+- 
+  project_type: ""
+  year: 2023
+  project_title: "Estimating Penang's Economic Growth"
+  location: Penang Institute
+  details: 
+  - Developing regional input-output models to estimate effects of economic 
+    shocks to Penang's GDP 
+  - Re-implemented Excel model in Python
+  - Assisted with acquisition of local data 
+- 
+  project_type: "Forthcoming"
+  year: 2023
+  project_title: "Penang Economic and Development Report 2022/23"
+  location: Penang Institute
+  details: 
+  - Prepared writeups for water and electricity, global business services, 
+    waste management, housing and climate change in Penang
+  - Assisted with acquisition of data and editing
+
+- 
+  project_type: Forthcoming
+  year: 2023
+  project_title: "Impact of Covid-19 on children and women in low-income families in Penang"
+  location: UNICEF/Penang Institute
+  details: 
+  - Statistical analysis including data preparation and visualisation
+  - Prepared writeup and editing in line with UN style guide
+
+- 
   project_type: Honours thesis
   year: 2017
   project_title: "Family background and child health: the role of socioeconomic status and skills"
@@ -24,6 +72,6 @@
   - Conducted and assisted with qualitative interviews with industry
     stakeholders and human resource personnel.
   - Assisted in the development of questionnaires for data collection and
-    development of strategies to improve response rates. 
+    strategies to improve response rates. 
   - Assisted in data analysis and designing data visualizations.
   

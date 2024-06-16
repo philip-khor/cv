@@ -1,11 +1,33 @@
 - 
+  company: Penang Institute
+  location: George Town, Penang
+  year: Jan 2024 - Present
+  position: "Visiting Data Scientist"
+  details:
+  - Developing dashboards covering local socioeconomic statistics and maintaining 
+    data pipelines
+  - Streamlined data pipelines to reduce the time taken for updates
+  - Redesign dashboards to improve clarity of data visualisations
+- 
+  company: Penang Institute
+  location: George Town, Penang
+  year: Jan - Dec 2023
+  position: "Statistician, Socioeconomics and Statistics Programme"
+  details:
+  - In addition to the above, support the transition of Penang Monthly’s statistics brief 
+    towards a more visual format with timely reviews and internal training
+  - Contributing to Penang Monthly statistics articles
+  - Prepare research reports and statistical analysis on key local socioeconomic issues 
+  - Organised internal workshop on use of large language models in think-tank work 
+
+- 
   company: CIMB Bank Berhad
+  location: Kuala Lumpur
   year: March 2020 - May 2022
   position: Manager, Regional Advanced Risk Modelling, Group Risk
-  location: Kuala Lumpur
   details: 
   - Review and enhance model development processes to meet regulatory expectations
-    for the use of complex modelling methodologies in the development of Basel and 
+    for the use of advanced modelling methodologies in the development of Basel and 
     IFRS9 credit risk ratings models. 
   - Communicate model outcomes to stakeholders to ensure that model behaviour 
     is consistent with business expectations.  
@@ -20,9 +42,9 @@
     model explanability and fairness considerations for credit risk ratings models.
 - 
   company: Skymind AI Berhad
+  location: George Town, Penang
   year: October 2019 - December 2019
   position: Technical Writer
-  location: George Town, Penang
   details: 
   - Prepared documentation on internally developed 
     model deployment software to support internal and external users.
@@ -30,9 +52,9 @@
   - Drove and provided support for community engagement events.
 - 
   company: GRID Inc.
+  location: Minato-ku, Tokyo
   year: May 2019 - August 2019
   position: Data Scientist Intern
-  location: Minato-ku, Tokyo
   details: 
   - Trained real-time object detection and image segmentation
     models for use in agriculture using YOLOv2, SSD and Mask R-CNN
@@ -45,9 +67,9 @@
     annotation data.
 - 
   company: The Center of Applied Data Science
+  location: Bangsar South, Kuala Lumpur
   year: July 2018 - May 2019
   position: Data Scientist Associate
-  location: Bangsar South, Kuala Lumpur
   details: 
   - Delivered over 100 hours in training sessions for Microsoft 
     Excel, R for Analytics, Tableau, Statistics and Data Storytelling.
@@ -65,9 +87,9 @@
   - Developed internal conventions for material formatting.
 -
   company: Penang Institute
+  location: George Town, Penang
   year: Dec 2015 - Jan 2016, Aug 2016 - Jan 2017
   position: "Research Assistant: Economics Studies"
-  location: George Town, Penang
   details:     
   - Provided key research assistance for the Penang Skilled Workforce Study
     project.
@@ -79,4 +101,6 @@
     (Nov 2016).
   - Contributed to the Penang Economic and Development Report 2015/2016 and the
     Institute's evaluation of the Trans-Pacific Partnership Agreement (TPPA).
+
+
 

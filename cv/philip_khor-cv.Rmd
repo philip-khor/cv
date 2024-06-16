@@ -13,7 +13,7 @@ headcolor: 414141
 output: 
   vitae::awesomecv: 
     keep_md: true
-    latex_engine: lualatex
+#    latex_engine: lualatex
 ---
 
 ```{r setup, include=FALSE}
@@ -43,19 +43,9 @@ read_then_unnest("cv/src/experience.yaml") |>
   detailed_entries(company, year, position, location, details)
 ```
 
-\newpage 
-# Education
-
+# Publications 
 ```{r}
-read_then_unnest("cv/src/education.yaml") |> 
-  detailed_entries(degree, year, institution, where, details)
-```
-
-# Qualifications
-
-```{r}
-read_then_unnest("cv/src/qualifications.yaml") |> 
-  detailed_entries(institution, year, qualification, where, details)
+bibliography_entries("../cv/src/cvlib.bib")
 ```
 
 # Projects 
@@ -64,4 +54,17 @@ read_then_unnest("cv/src/qualifications.yaml") |>
 read_then_unnest("cv/src/projects.yaml") |> 
   detailed_entries(project_type, year, project_title, location, details)
 ```
+# Education
+
+```{r}
+read_then_unnest("cv/src/education.yaml") |> 
+  detailed_entries(degree, year, institution, where, details)
+```
+# Qualifications
+
+```{r}
+read_then_unnest("cv/src/qualifications.yaml") |> 
+  detailed_entries(institution, year, qualification, where, details)
+```
+
 
