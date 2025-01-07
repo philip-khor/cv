@@ -46,7 +46,7 @@ jobs:
         run: rmarkdown::render("cv/philip_khor-cv.Rmd")
         shell: Rscript {0}
         
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: cv
-          path: "*.pdf"
+          path: "cv/*.pdf"
