@@ -10,7 +10,7 @@
 #set par(justify: true, leading: 0.5em)
 
 #show heading.where(level: 1): it => {
-  block(above: 0.3em, below: 0.1em)[
+  block(above: 0.6em, below: 0em)[
     #set text(size: 14pt, weight: "bold", fill: accent)
     #it.body
     #box(width: 1fr, stroke: (bottom: 0.5pt + accent))
@@ -18,7 +18,7 @@
 }
 
 #let entry(title, location: "", date: "", description: "") = {
-  block(above: 0.7em, below: 0.1em)[
+  block(above: 0.5em, below: 0em)[
     #grid(columns: (1fr, auto))[
       #text(weight: "bold", size: 10pt)[#title]
     ][
@@ -41,7 +41,7 @@
 }
 
 #let item(body) = {
-  block(above: 0.15em, below: 0.5em)[
+  block(above: 0.1em, below: 0.3em)[
     #set text(size: 9pt, weight: "light")
     #set par(leading: 0.5em)
     #body
