@@ -1,38 +1,60 @@
-#import "@preview/modern-cv:0.10.0": *
-#import "@preview/fontawesome:0.6.0": fa-version
+#import "@preview/fontawesome:0.6.0": fa-version, fa-icon
 
 #fa-version("6")
 
-#let accent-clr = rgb("555555")
+#let accent = rgb("555555")
 
-#show: resume.with(
-  author: (
-    firstname: "Philip",
-    lastname: "Khor",
-    email: "pk.qa@outlook.com",
-    phone: "+60 16 720 2723",
-    homepage: "philipscurve.com",
-    github: "philip-khor",
-    linkedin: "philip-khor",
-    address: "Penang, Malaysia",
-    positions: ("Data Scientist",),
-  ),
-  profile-picture: none,
-  accent-color: accent-clr,
-  colored-headers: true,
-  font: ("Roboto",),
-  header-font: "Roboto",
-)
-
-#set text(size: 9pt)
+#set page(paper: "a4", margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 20mm))
+#set text(font: ("Roboto",), size: 10pt, fill: rgb("#333333"))
+#set heading(numbering: none, outlined: false)
+#set par(justify: true, leading: 0.5em)
 
 #show heading.where(level: 1): it => {
-  set text(size: 12pt)
-  block(sticky: true)[
-    #text(accent-clr, weight: "bold")[#it.body]
-    #box(width: 1fr, stroke: (bottom: 1pt + accent-clr))
+  block(above: 0.6em, below: 0em)[
+    #set text(size: 14pt, weight: "bold", fill: accent)
+    #it.body
+    #box(width: 1fr, stroke: (bottom: 0.5pt + accent))
   ]
 }
+
+#let entry(title, location: "", date: "", description: "") = {
+  block(above: 0.5em, below: 0em)[
+    #grid(columns: (1fr, auto))[
+      #text(weight: "bold", size: 10pt)[#title]
+    ][
+      #align(right, text(size: 9pt, fill: gray)[#location])
+    ]
+    #if (type(description) == str and description != "") or date != "" [
+      #grid(columns: (1fr, auto))[
+        #if type(description) == str and description != "" [
+          #text(size: 9pt, style: "italic", fill: rgb("#555555"))[#description]
+        ] else [
+          #text(size: 9pt)[]
+        ]
+      ][
+        #if date != "" [
+          #align(right, text(size: 9pt, fill: gray)[#date])
+        ]
+      ]
+    ]
+  ]
+}
+
+#let item(body) = {
+  block(above: 0.1em, below: 0.3em)[
+    #set text(size: 9pt, weight: "light")
+    #set par(leading: 0.5em)
+    #body
+  ]
+}
+
+#align(center, text(size: 30pt, weight: "thin", fill: accent)["Philip"] + text(size: 30pt, weight: "bold", fill: accent)[" Khor"])
+
+#align(center, text(size: 9pt, fill: accent, weight: "regular", style: "normal")[Data Scientist])
+
+#align(center, text(size: 8pt)[#fa-icon("location-dot") Penang, Malaysia  \  #fa-icon("envelope") pk.qa\@outlook.com  \  #fa-icon("globe") philipscurve.com  \  #fa-icon("github") github.com/philip-khor  \  #fa-icon("linkedin") linkedin.com/in/philip-khor])
+
+#block(above: 0.5em)
 
 #let exp = yaml("src/experience.yaml")
 #let proj = yaml("src/projects.yaml")
@@ -48,15 +70,8 @@ credit risk modelling, fair ML, and applied microeconometrics.
 = Work Experience
 
 #for e in exp {
-  resume-entry(
-    title: str(e.company),
-    location: str(e.location),
-    date: str(e.year),
-    description: str(e.position),
-  )
-  resume-item(
-    e.details.map(d => [- #d]).join([])
-  )
+  entry(str(e.company), location: str(e.location), date: str(e.year), description: str(e.position))
+  item(e.details.map(d => [- #d]).join([]))
 }
 
 = Publications
@@ -66,41 +81,20 @@ credit risk modelling, fair ML, and applied microeconometrics.
 = Projects
 
 #for p in proj {
-  resume-entry(
-    title: str(p.project_title),
-    location: str(p.location),
-    date: str(p.year),
-    description: if p.project_type == "" { none } else { str(p.project_type) },
-  )
-  resume-item(
-    p.details.map(d => [- #d]).join([])
-  )
+  entry(str(p.project_title), location: str(p.location), date: str(p.year), description: if p.project_type == "" { none } else { str(p.project_type) })
+  item(p.details.map(d => [- #d]).join([]))
 }
 
 = Education
 
 #for e in edu {
-  resume-entry(
-    title: str(e.degree),
-    location: str(e.where),
-    date: str(e.year),
-    description: str(e.institution),
-  )
-  resume-item(
-    e.details.map(d => [- #d]).join([])
-  )
+  entry(str(e.degree), location: str(e.where), date: str(e.year), description: str(e.institution))
+  item(e.details.map(d => [- #d]).join([]))
 }
 
 = Qualifications
 
 #for q in qual {
-  resume-entry(
-    title: str(q.qualification),
-    location: str(q.where),
-    date: str(q.year),
-    description: str(q.institution),
-  )
-  resume-item(
-    q.details.map(d => [- #d]).join([])
-  )
+  entry(str(q.qualification), location: str(q.where), date: str(q.year), description: str(q.institution))
+  item(q.details.map(d => [- #d]).join([]))
 }
