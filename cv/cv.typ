@@ -1,51 +1,56 @@
 #let accent = rgb("555555")
 
-#set page(paper: "a4", margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 15mm))
+#set page(paper: "a4", margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 20mm))
 #set text(font: ("Roboto",), size: 10pt, fill: rgb("#333333"))
 #set heading(numbering: none, outlined: false)
-#set par(justify: true)
+#set par(justify: true, leading: 0.5em)
 
 #show heading.where(level: 1): it => {
-  block[
-    #set text(size: 12pt, weight: "bold", fill: accent)
+  block(above: 0.8em, below: 0.2em)[
+    #set text(size: 14pt, weight: "bold", fill: accent)
     #it.body
-    #box(width: 1fr, stroke: (bottom: 1pt + accent))
+    #box(width: 1fr, stroke: (bottom: 0.5pt + accent))
   ]
 }
 
-#let sec-heading(body) = {
-  heading(level: 1)[#body]
-}
-
 #let entry(title, location: "", date: "", description: "") = {
-  block(above: 6pt, below: 2pt)[
+  block(above: 0.6em, below: 0.3em)[
     #grid(columns: (1fr, auto))[
       #text(weight: "bold", size: 10pt)[#title]
     ][
-      #text(size: 9pt, fill: gray)[#location]
+      #align(right, text(size: 9pt, fill: gray)[#location])
     ]
-    #if description != "" [
-      #text(size: 9pt, style: "italic", fill: rgb("#555555"))[#description]
-    ]
-    #if date != "" [
-      #text(size: 9pt, fill: gray)[#date]
+    #if (type(description) == str and description != "") or date != "" [
+      #grid(columns: (1fr, auto))[
+        #if type(description) == str and description != "" [
+          #text(size: 9pt, style: "italic", fill: rgb("#555555"))[#description]
+        ] else [
+          #text(size: 9pt)[]
+        ]
+      ][
+        #if date != "" [
+          #align(right, text(size: 9pt, fill: gray)[#date])
+        ]
+      ]
     ]
   ]
 }
 
 #let item(body) = {
-  block(above: 4pt, below: 6pt)[
-    #text(size: 9.5pt, weight: "light")[#body]
+  block(above: 0.3em, below: 0.6em)[
+    #set text(size: 9pt, weight: "light")
+    #set par(leading: 0.5em)
+    #body
   ]
 }
 
-#align(center, text(size: 24pt, weight: "thin", fill: accent)["Philip"] + text(size: 24pt, weight: "bold", fill: accent)[" Khor"])
+#align(center, text(size: 30pt, weight: "thin", fill: accent)["Philip"] + text(size: 30pt, weight: "bold", fill: accent)[" Khor"])
 
-#align(center, text(size: 9pt, fill: accent, weight: "regular")[Data Scientist])
+#align(center, text(size: 9pt, fill: accent, weight: "regular", style: "normal")[Data Scientist])
 
-#align(center, text(size: 9pt)[Penang, Malaysia  ·  pk.qa\@outlook.com  ·  philipscurve.com  ·  github.com/philip-khor  ·  linkedin.com/in/philip-khor])
+#align(center, text(size: 8pt)[Penang, Malaysia  ·  pk.qa\@outlook.com  ·  philipscurve.com  ·  github.com/philip-khor  ·  linkedin.com/in/philip-khor])
 
-#block(above: 8pt)
+#block(above: 0.5em)
 
 #let exp = yaml("src/experience.yaml")
 #let proj = yaml("src/projects.yaml")
