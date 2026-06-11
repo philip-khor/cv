@@ -9,5 +9,5 @@ $output  = Join-Path $scriptDir "philip_khor-cv.pdf"
 if ($Watch) {
   typst watch --font-path $fontDir $source $output
 } else {
-  typst compile --font-path $fontDir $source $output
+  typst compile --no-pdf-tags --font-path $fontDir $source $output
 }
