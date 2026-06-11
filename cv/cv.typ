@@ -18,7 +18,7 @@
     positions: ("Data Scientist",),
   ),
   profile-picture: none,
-  show-footer: false,
+  show-footer: true,
   accent-color: accent-clr,
   colored-headers: true,
   font: ("Roboto",),
@@ -80,10 +80,6 @@ credit risk modelling, fair ML, and applied microeconometrics.
     e.details.map(d => [- #d]).join([])
   )
 }
-
-= Publications
-
-#bibliography("src/cvlib.bib", title: none, full: true)
 
 = Projects
 
