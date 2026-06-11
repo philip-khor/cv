@@ -24,13 +24,34 @@
   header-font: "Roboto",
 )
 
-#set text(size: 9pt)
-
 #show heading.where(level: 1): it => {
-  set text(size: 12pt)
   block[
+    #set text(size: 12pt)
     #text(accent-clr, weight: "bold")[#it.body]
     #box(width: 1fr, stroke: (bottom: 1pt + accent-clr))
+  ]
+}
+
+#let resume-entry(
+  title: none,
+  location: "",
+  date: "",
+  description: "",
+  title-link: none,
+) = {
+  let title-content
+  if type(title-link) == str {
+    title-content = link(title-link)[#title]
+  } else {
+    title-content = title
+  }
+  block(above: 1em, below: 0.65em)[
+    #pad[
+      justified-header(title-content, location)
+      if description != "" or date != "" [
+        secondary-justified-header(description, date)
+      ]
+    ]
   ]
 }
 
