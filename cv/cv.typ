@@ -28,7 +28,7 @@
 
 #show heading.where(level: 1): it => {
   set text(size: 12pt)
-  block(sticky: true)[
+  block[
     #text(accent-clr, weight: "bold")[#it.body]
     #box(width: 1fr, stroke: (bottom: 1pt + accent-clr))
   ]
