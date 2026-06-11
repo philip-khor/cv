@@ -61,7 +61,7 @@ credit risk modelling, fair ML, and applied microeconometrics.
 
 = Publications
 
-#bibliography("src/cvlib.bib", title: none)
+#bibliography("src/cvlib.bib", title: none, full: true)
 
 = Projects
 
