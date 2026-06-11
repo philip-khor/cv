@@ -18,16 +18,18 @@
 }
 
 #let entry(title, location: "", date: "", description: "") = {
-  grid(columns: (1fr, auto), gutter: 4pt)[
-    #text(weight: "bold", size: 11pt)[#title]
-  ][
-    #text(size: 9pt, fill: gray, align(right))[#location]
-  ]
-  if description != "" [
-    #text(size: 9pt, style: "italic")[#description]
-  ]
-  if date != "" [
-    #box(width: 1fr, align(right))#text(size: 9pt, fill: gray)[#date]
+  block(above: 6pt, below: 2pt)[
+    #grid(columns: (1fr, auto))[
+      #text(weight: "bold", size: 10pt)[#title]
+    ][
+      #text(size: 9pt, fill: gray)[#location]
+    ]
+    #if description != "" [
+      #text(size: 9pt, style: "italic", fill: rgb("#555555"))[#description]
+    ]
+    #if date != "" [
+      #text(size: 9pt, fill: gray)[#date]
+    ]
   ]
 }
 
@@ -41,7 +43,7 @@
 
 #align(center, text(size: 9pt, fill: accent, weight: "regular")[Data Scientist])
 
-#align(center, text(size: 9pt)[Penang, Malaysia  ·  pk.qa@outlook.com  ·  philipscurve.com  ·  github.com/philip-khor  ·  linkedin.com/in/philip-khor])
+#align(center, text(size: 9pt)[Penang, Malaysia  ·  pk.qa\@outlook.com  ·  philipscurve.com  ·  github.com/philip-khor  ·  linkedin.com/in/philip-khor])
 
 #block(above: 8pt)
 
