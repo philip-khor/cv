@@ -33,7 +33,8 @@ jobs:
       - name: Compile CV
         run: typst compile --font-path cv/fonts cv/cv.typ cv/philip_khor-cv.pdf
 
-      - uses: actions/upload-artifact@v6
+      - uses: actions/upload-artifact@v7
         with:
           name: cv
           path: cv/philip_khor-cv.pdf
+          archive: false
