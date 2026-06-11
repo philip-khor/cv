@@ -16,11 +16,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: typst-community/setup-typst@v3
-        with:
-          typst-version: latest
+      - uses: typst-community/setup-typst@v5
 
       - name: Download Roboto fonts
         run: |
@@ -40,7 +38,7 @@ jobs:
       - name: Compile CV
         run: typst compile --font-path cv/fonts cv/cv.typ cv/philip_khor-cv.pdf
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: cv
           path: cv/philip_khor-cv.pdf
