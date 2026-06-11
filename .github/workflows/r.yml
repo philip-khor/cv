@@ -20,17 +20,12 @@ jobs:
 
       - uses: typst-community/setup-typst@v5
 
-      - name: Download Roboto fonts
-        run: |
-          mkdir -p cv/fonts
-          for f in Regular Bold Italic BoldItalic Light LightItalic Medium MediumItalic Thin ThinItalic; do
-            url="https://github.com/google/fonts/raw/main/ofl/roboto/Roboto-$f.ttf"
-            echo "Downloading Roboto-$f.ttf..."
-            curl -sL "$url" -o "cv/fonts/Roboto-$f.ttf"
-          done
+      - name: Install Roboto fonts
+        run: sudo apt-get install -y fonts-roboto
 
       - name: Download Font Awesome 6 OTF fonts
         run: |
+          mkdir -p cv/fonts
           curl -sL "https://github.com/FortAwesome/Font-Awesome/releases/download/6.7.2/fontawesome-free-6.7.2-desktop.zip" -o /tmp/fa6.zip
           unzip -q /tmp/fa6.zip -d /tmp/fa6
           cp /tmp/fa6/*/otfs/*.otf cv/fonts/
