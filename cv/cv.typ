@@ -1,3 +1,7 @@
+#import "@preview/fontawesome:0.6.0": fa-version, fa-icon
+
+#fa-version("6")
+
 #let accent = rgb("555555")
 
 #set page(paper: "a4", margin: (left: 15mm, right: 15mm, top: 10mm, bottom: 20mm))
@@ -6,7 +10,7 @@
 #set par(justify: true, leading: 0.5em)
 
 #show heading.where(level: 1): it => {
-  block(above: 0.8em, below: 0.2em)[
+  block(above: 0.3em, below: 0.1em)[
     #set text(size: 14pt, weight: "bold", fill: accent)
     #it.body
     #box(width: 1fr, stroke: (bottom: 0.5pt + accent))
@@ -14,7 +18,7 @@
 }
 
 #let entry(title, location: "", date: "", description: "") = {
-  block(above: 0.6em, below: 0.3em)[
+  block(above: 0.7em, below: 0.1em)[
     #grid(columns: (1fr, auto))[
       #text(weight: "bold", size: 10pt)[#title]
     ][
@@ -37,7 +41,7 @@
 }
 
 #let item(body) = {
-  block(above: 0.3em, below: 0.6em)[
+  block(above: 0.15em, below: 0.5em)[
     #set text(size: 9pt, weight: "light")
     #set par(leading: 0.5em)
     #body
@@ -48,7 +52,7 @@
 
 #align(center, text(size: 9pt, fill: accent, weight: "regular", style: "normal")[Data Scientist])
 
-#align(center, text(size: 8pt)[Penang, Malaysia  ·  pk.qa\@outlook.com  ·  philipscurve.com  ·  github.com/philip-khor  ·  linkedin.com/in/philip-khor])
+#align(center, text(size: 8pt)[#fa-icon("location-dot") Penang, Malaysia  \  #fa-icon("envelope") pk.qa\@outlook.com  \  #fa-icon("globe") philipscurve.com  \  #fa-icon("github") github.com/philip-khor  \  #fa-icon("linkedin") linkedin.com/in/philip-khor])
 
 #block(above: 0.5em)
 
