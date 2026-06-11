@@ -18,6 +18,7 @@
     positions: ("Data Scientist",),
   ),
   profile-picture: none,
+  show-footer: false,
   accent-color: accent-clr,
   colored-headers: true,
   font: ("Roboto",),
