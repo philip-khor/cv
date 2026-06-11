@@ -1,20 +1,12 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-#
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
-
-name: R
+name: Build CV
 
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     paths: 'cv/**'
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths: 'cv/**'
 
 permissions:
@@ -23,30 +15,26 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      RENV_PATHS_ROOT: ~/.local/share/renv
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      RENV_CONFIG_PAK_ENABLED: false
-      RENV_CONFIG_PPM_ENABLED: true
-      
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: r-lib/actions/setup-r@v2
-        with: 
-          use-public-rspm: true
-            
-      - uses: r-lib/actions/setup-pandoc@v2
-        
-      - uses: r-lib/actions/setup-renv@v2
-      
-      - uses: r-lib/actions/setup-tinytex@v2
-      
-      - name: Render Rmarkdown files
-        run: rmarkdown::render("cv/philip_khor-cv.Rmd")
-        shell: Rscript {0}
-        
-      - uses: actions/upload-artifact@v4
+      - uses: actions/checkout@v6
+
+      - uses: typst-community/setup-typst@v5
+
+      - name: Install Roboto fonts
+        run: sudo apt-get install -y fonts-roboto
+
+      - name: Download Font Awesome 6 OTF fonts
+        run: |
+          mkdir -p cv/fonts
+          curl -sL "https://github.com/FortAwesome/Font-Awesome/releases/download/6.7.2/fontawesome-free-6.7.2-desktop.zip" -o /tmp/fa6.zip
+          unzip -q /tmp/fa6.zip -d /tmp/fa6
+          cp /tmp/fa6/*/otfs/*.otf cv/fonts/
+
+      - name: Compile CV
+        run: typst compile --font-path cv/fonts cv/cv.typ cv/philip_khor-cv.pdf
+
+      - uses: actions/upload-artifact@v7
         with:
           name: cv
-          path: "cv/*.pdf"
+          path: cv/philip_khor-cv.pdf
+          archive: false

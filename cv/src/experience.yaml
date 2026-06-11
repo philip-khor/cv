@@ -1,15 +1,42 @@
 - 
   company: SustenyX
   location: Remote
-  year: Aug 2024 - present
+  year: Mar 2026 - May 2026
+  position: "Technical Consultant"
+  details: 
+  - Provided post-departure architecture and engineering continuity for 
+    the ESG gap analysis platform
+  - Covered pipeline design, code review, and developer knowledge transfer
+- 
+  company: SustenyX
+  location: Remote
+  year: June 2025 - Feb 2026
+  position: "Sustainability Intelligence & Compliance Manager"
+  details: 
+  - Translated FTSE Russell ratings methodology and IFRS Sustainability 
+    Disclosure Standards into AI-powered intelligence systems, engagement 
+    protocols, and commercial offerings for capital market clients across 
+    Southeast Asia
+  - Defined the subject-matter logic for LLM-based ESG gap analysis workflows, 
+    including pipeline architecture, NLP strategies for keyword extraction 
+    from company disclosures, and code review for modularity
+  - Acted as the technical bridge for sales and marketing; mapped the regional 
+    regulatory landscape for product expansion; coordinated localisation across 
+    target markets
+  - Remediated infrastructure security gaps, bringing AWS environment 
+    compliance from 70% to 92%
+- 
+  company: SustenyX
+  location: Remote
+  year: Aug 2024 - June 2025
   position: "Sustainable Finance Consultant"
   details: 
-  - Conduct in-depth research on ESG ratings, 
+  - Conducted in-depth research on ESG ratings, 
     standards and frameworks, and competitor analysis 
-  - Develop reports, presentations, and thought leadership pieces
-    on key sustainability topics for internal and external audiences.
-  - Utilize data analysis and AI tools to refine ESG product 
-    development and develop recommendation models.
+  - Developed reports, presentations, and thought leadership pieces
+    on key sustainability topics for internal and external audiences
+  - Utilized data analysis and AI tools to refine ESG product 
+    development and recommendation models
 - 
   company: Penang Institute
   location: George Town, Penang
