@@ -24,8 +24,7 @@
   - Evaluated and selected document parsing/OCR and LLM provider infrastructure
     for production deployment across accuracy, cost, and structured-output reliability
   - Built a manual ground-truth evaluation set against ISSB disclosure criteria to
-    catch systematic model error patterns (e.g. risk-classification sequencing)
-    and fed corrections back into prompt design
+    catch systematic model error patterns and fed corrections back into prompt design
   - Drove cost conversations alongside LLM workflow development — surfacing
     cost-performance trade-offs for model selection, caching architecture,
     and cost-per-job tracking
