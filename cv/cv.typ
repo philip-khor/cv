@@ -33,6 +33,8 @@
 
 Economist by training, data scientist by practice. Python and R across ML modelling, LLM pipelines, and applied econometrics — ESG/sustainability, regulatory machine learning, and economic policy. Technical educator across industries — banking, think-tanks, and corporate training.
 
+*Skills*: Python, R, SQL • XGBoost (monotonic constraints), scikit-learn • LLM/agent systems: prompt architecture, RAG, Flowise • Agentic coding: Claude Code, OpenCode • MongoDB, DuckDB, AWS • Tableau • Credit risk: Basel, IFRS 9 • ESG/ISSB: FTSE Russell methodology, IFRS S1/S2
+
 = Work Experience
 
 #for e in exp {

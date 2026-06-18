@@ -1,29 +1,35 @@
-- 
+-
   company: SustenyX
   location: Remote
   year: Mar 2026 - May 2026
   position: "Technical Consultant"
-  details: 
-  - Provided post-departure architecture and engineering continuity for 
-    the ESG gap analysis platform
-  - Covered pipeline design, code review, and developer knowledge transfer
+  details:
+  - Shipped full-stack PRs (frontend and backend) across a TypeScript-based
+    MERN-stack codebase using agentic coding tools (Claude Code, OpenCode)
+  - Refactored core modules toward an OOP architecture to improve
+    maintainability ahead of handover
+  - Led code review and developer knowledge transfer for continuity post-departure
 - 
   company: SustenyX
   location: Remote
   year: June 2025 - Feb 2026
   position: "Sustainability Intelligence & Compliance Manager"
-  details: 
-  - Translated FTSE Russell ratings methodology and IFRS Sustainability 
-    Disclosure Standards into AI-powered intelligence systems, engagement 
-    protocols, and commercial offerings for capital market clients across 
-    Southeast Asia
-  - Defined the subject-matter logic for LLM-based ESG gap analysis workflows, 
-    including pipeline architecture, NLP strategies for keyword extraction 
-    from company disclosures, and code review for modularity
-  - Acted as the technical bridge for sales and marketing; mapped the regional 
-    regulatory landscape for product expansion; coordinated localisation across 
-    target markets
-  - Remediated infrastructure security gaps, bringing AWS environment 
+  details:
+  - Translated FTSE Russell ratings methodology and IFRS Sustainability
+    Disclosure Standards into AI-powered intelligence systems and commercial
+    offerings for capital market clients across Southeast Asia
+  - Architected a multi-stage LLM prompt-engineering instruction set for ESG
+    disclosure analysis, built on a config-driven (YAML) framework decoupling
+    the entire pipeline logic — not just indicator scoring — from application code
+  - Evaluated and selected document parsing/OCR and LLM provider infrastructure
+    for production deployment across accuracy, cost, and structured-output reliability
+  - Built a manual ground-truth evaluation set against ISSB disclosure criteria to
+    catch systematic model error patterns (e.g. risk-classification sequencing)
+    and fed corrections back into prompt design
+  - Drove cost conversations alongside LLM workflow development — surfacing
+    cost-performance trade-offs for model selection, caching architecture,
+    and cost-per-job tracking
+  - Remediated infrastructure security gaps, bringing AWS environment
     compliance from 70% to 92%
 -
   company: Forward College
@@ -37,7 +43,7 @@
   company: SustenyX
   location: Remote
   year: Aug 2024 - June 2025
-  position: "Sustainable Finance Consultant"
+  position: "Sustainable Finance Consultant (concurrent, part-time)"
   details: 
   - Conducted in-depth research on ESG ratings, 
     standards and frameworks, and competitor analysis 
@@ -70,9 +76,15 @@
   location: Kuala Lumpur
   year: March 2020 - May 2022
   position: Manager, Regional Advanced Risk Modelling, Group Risk
-  details: 
+  details:
   - Reviewed and enhanced credit risk model development processes for Basel and IFRS 9
     across ASEAN markets
+  - Defined the regulatory strategy for the team's machine learning credit screening
+    (A/B) models, scoping model development toward BNM regulatory acceptance with
+    IFRS 9 provisioning as the end use case
+  - Benchmarked model governance and fairness documentation against MAS' FEAT
+    principles and tracked the model-risk stance of other supervisors (e.g. ECB)
+    to anticipate where BNM requirements were heading
   - Communicated model outcomes to stakeholders and prepared documentation for
     machine learning models
   - Worked with model validators and data engineers on feature derivation
