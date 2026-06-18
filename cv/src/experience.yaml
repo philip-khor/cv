@@ -17,7 +17,7 @@
   details:
   - Translated FTSE Russell ratings methodology and IFRS Sustainability
     Disclosure Standards into AI-powered intelligence systems and commercial
-    offerings for capital market clients across Southeast Asia
+    offerings for corporate issuers in Malaysia
   - Architected a multi-stage LLM prompt-engineering instruction set for ESG
     disclosure analysis, built on a config-driven (YAML) framework decoupling
     the entire pipeline logic from application code
