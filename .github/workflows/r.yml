@@ -31,7 +31,7 @@ jobs:
           cp /tmp/fa6/*/otfs/*.otf cv/fonts/
 
       - name: Compile CV
-        run: typst compile --pdf-standard 1.7 --font-path cv/fonts cv/cv.typ cv/philip_khor-cv.pdf
+        run: typst compile --pdf-standard 1.7 --font-path cv/fonts --package-path typst-packages cv/cv.typ cv/philip_khor-cv.pdf
 
       - uses: actions/upload-artifact@v7
         with:
