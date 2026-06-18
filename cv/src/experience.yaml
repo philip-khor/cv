@@ -20,7 +20,7 @@
     offerings for capital market clients across Southeast Asia
   - Architected a multi-stage LLM prompt-engineering instruction set for ESG
     disclosure analysis, built on a config-driven (YAML) framework decoupling
-    the entire pipeline logic — not just indicator scoring — from application code
+    the entire pipeline logic from application code
   - Evaluated and selected document parsing/OCR and LLM provider infrastructure
     for production deployment across accuracy, cost, and structured-output reliability
   - Built a manual ground-truth evaluation set against ISSB disclosure criteria to
