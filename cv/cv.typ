@@ -33,8 +33,6 @@
 
 Economist by training, data scientist by practice. Python and R across ML modelling, LLM pipelines, and applied econometrics — ESG/sustainability, regulatory machine learning, and economic policy. Technical educator across industries — banking, think-tanks, and corporate training.
 
-*Skills*: Python, R, SQL • XGBoost (monotonic constraints), scikit-learn • LLM/agent systems: prompt architecture, RAG, Flowise • Agentic coding: Claude Code, OpenCode • MongoDB, DuckDB, AWS • Tableau • Credit risk: Basel, IFRS 9 • ESG/ISSB: FTSE Russell methodology, IFRS S1/S2
-
 = Work Experience
 
 #for e in exp {
@@ -48,6 +46,8 @@ Economist by training, data scientist by practice. Python and R across ML modell
     #for d in e.details [- #d]
   ]
 }
+
+#pagebreak()
 
 = Research & Projects
 
@@ -70,6 +70,8 @@ Economist by training, data scientist by practice. Python and R across ML modell
     - #text(style: "italic")[#p.title]#if "coauthors" in p [ (with #p.coauthors)]. #p.venue, #p.date#if "note" in p [ \[#p.note\]].
   ]
 ]
+
+#pagebreak()
 
 = Education
 
@@ -98,3 +100,11 @@ Economist by training, data scientist by practice. Python and R across ML modell
     #for d in q.details [- #d]
   ]
 }
+
+= Skills
+
+#resume-skill-item("Languages", ("Python", "R"))
+#resume-skill-item("ML", ("XGBoost (monotonic constraints)", "AutoML"))
+#resume-skill-item("LLM / Agents", ("RAG", "Flowise", "Claude Code", "OpenCode"))
+#resume-skill-item("Infrastructure", ("MongoDB", "DuckDB", "AWS"))
+#resume-skill-item("Domain", ("Credit risk: Basel, IFRS 9", "ESG/ISSB: FTSE Russell ESG methodology, IFRS SDS", "Fair ML, model explainability", "data visualisation"))
